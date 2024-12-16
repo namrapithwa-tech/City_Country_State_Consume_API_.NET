@@ -5,5 +5,5 @@ I have perform Web API in Country, City , State Tables.
 
 API of this project is also uploaded on my Profile. 
 
-**From Below link you acces api project**
+**From Below link you access api project**
 https://github.com/namrapithwa-tech/NAMSTE_ASP.NET_CORE_WEBAPI
