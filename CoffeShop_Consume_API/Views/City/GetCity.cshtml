@@ -1,0 +1,45 @@
+﻿@* GetCity.cshtml*@
+@model IEnumerable<CityModel>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+else if (TempData["MessageNotDelete"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MessageNotDelete"]
+    </div>
+}
+
+<h2> City List</h2>
+
+<div>
+    <a class="btn btn-info" asp-controller="City" asp-action="Edit">Add New City</a>
+</div>
+
+<br />
+
+<table class="table table-responsive border border-primary">
+    <tr>
+        <th class="border border-primary">CityID</th>
+        <th class="border border-primary">CityName</th>
+        <th class="border border-primary">CityCode</th>
+        <th class="border border-primary">Actions</th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td class="border border-primary">@i.CityID</td>
+            <td class="border border-primary">@i.CityName</td>
+            <td class="border border-primary">@i.CityCode</td>
+            <td class="border border-primary">
+                <a href="@Url.Action("Edit","City",new {CityID = i.CityID})" class="btn btn-sm btn-primary">Edit</a>
+                <a href="@Url.Action("Delete","City",new {CityID = i.CityID})" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

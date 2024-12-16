@@ -1,0 +1,45 @@
+﻿@* GetState.cshtml*@
+@model IEnumerable<StateModel>
+
+@if (TempData["Message"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["Message"]
+    </div>
+}
+else if (TempData["MessageNotDelete"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["MessageNotDelete"]
+    </div>
+}
+
+<h2> State List</h2>
+
+<div>
+    <a class="btn btn-info" asp-controller="State" asp-action="Edit">Add New State</a>
+</div>
+
+<br />
+
+<table class="table table-responsive border border-primary">
+    <tr>
+        <th class="border border-primary">StateID</th>
+        <th class="border border-primary">StateName</th>
+        <th class="border border-primary">StateCode</th>
+        <th class="border border-primary">Actions</th>
+    </tr>
+
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td class="border border-primary">@i.StateID</td>
+            <td class="border border-primary">@i.StateName</td>
+            <td class="border border-primary">@i.StateCode</td>
+            <td class="border border-primary">
+                <a href="@Url.Action("Edit","State",new {StateID = i.StateID})" class="btn btn-sm btn-primary">Edit</a>
+                <a href="@Url.Action("Delete","State",new {StateID = i.StateID})" class="btn btn-sm btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
