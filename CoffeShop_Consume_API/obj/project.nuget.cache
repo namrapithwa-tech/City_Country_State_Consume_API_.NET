@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "20co/a2xsXA=",
+  "dgSpecHash": "pVDl2/HNX8s=",
   "success": true,
-  "projectFilePath": "D:\\B.Tech All Sem Data\\Sem-6(4)\\ADV.NET\\CoffeShop_Consume_API\\CoffeShop_Consume_API.csproj",
+  "projectFilePath": "D:\\B.Tech All Sem Data\\Sem-6(4)\\ADV.NET\\NET_ALL_GIT_HUB\\City_Country_State_Consume_API_.NET\\CoffeShop_Consume_API\\CoffeShop_Consume_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\namra\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
